@@ -1,0 +1,268 @@
+.app {
+  height: 100vh;
+  display: flex;
+  background-color: #020230;
+  color: white;
+}
+
+.main {
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), #020230),
+    url("./assets/bg.jpg") center;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  height: 50%;
+  position: relative;
+}
+
+.timer {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 5px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 34px;
+  font-weight: 800;
+  position: absolute;
+  bottom: 25px;
+  left: 150px;
+}
+
+.quiz {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.question {
+  width: 80%;
+  background: linear-gradient(#100241, black);
+  border: 2px solid teal;
+  padding: 15px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 21px;
+}
+
+.answers {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer {
+  width: 40%;
+  padding: 10px;
+  text-align: center;
+  background: linear-gradient(#0e0124, #22074d);
+  border: 2px solid teal;
+  border-radius: 20px;
+  font-style: 21px;
+  font-weight: 300;
+  margin: 0 20px 20px 0;
+  cursor: pointer;
+}
+
+.answer:hover,
+.answer.active {
+  background: #061a8c;
+}
+
+.answer.correct {
+  animation: correct 3s ease forwards;
+}
+
+@keyframes correct {
+  0%,
+  22%,
+  42% {
+    background: #061a8c;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: #0cc233;
+  }
+}
+
+.answer.wrong {
+  animation: wrong 3s ease forwards;
+}
+
+@keyframes wrong {
+  0%,
+  22%,
+  42% {
+    background: #061a8c;
+  }
+  20%,
+  40%,
+  60% {
+    background: linear-gradient(#0e0124, #22074d);
+  }
+  62%,
+  100% {
+    background: #990000;
+  }
+}
+
+.bottom {
+  height: 50%;
+}
+
+.pyramid {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prise {
+  list-style: none;
+  width: 100%;
+  padding: 20px;
+}
+
+.priseListItem {
+  display: flex;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.priseListItem.active {
+  background-color: teal;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.priseListItemNumber {
+  font-size: 18px;
+  font-weight: 100;
+  width: 30%;
+}
+
+.priseListItemAmount {
+  font-style: 20px;
+  font-weight: 200;
+}
+
+.endText {
+  position: relative;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.playAgainBtn {
+  width: 50%;
+  height: 40px;
+  border: 1px solid teal;
+  background-color: teal;
+  border-radius: 10px;
+  margin-top: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.playAgainBtn:hover {
+  background-color: teal;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.startTitle {
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  position: absolute;
+  font-size: 58px;
+  font-weight: 600;
+  top: 100px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.startWarning {
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  position: absolute;
+  top: 320px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.startIcon {
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  position: absolute;
+  top: -150px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.start {
+  width: 350px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.startInput {
+  width: 70%;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.startInput:focus {
+  outline: none;
+}
+
+.startButton {
+  width: 40%;
+  border: 5px solid teal;
+  border-radius: 10px;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.startButton:hover {
+  background-color: teal;
+  color: #fff;
+}
